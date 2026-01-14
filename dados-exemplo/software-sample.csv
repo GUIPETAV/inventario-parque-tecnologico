@@ -1,0 +1,289 @@
+Software,Versao,Fabricante,Computador,Data_Instalacao
+Visual Studio Code,1.73,Microsoft,COMP-001,2023-06-16
+Kaspersky Endpoint Security,11.6,Kaspersky,COMP-001,2023-01-09
+Google Chrome,110.0,Google,COMP-001,2023-11-19
+Zoom,5.13,Zoom Video Communications,COMP-001,2023-03-06
+Python 3.10,3.10.8,Python Software Foundation,COMP-001,2023-11-21
+Adobe Acrobat Reader,2021.007,Adobe,COMP-001,2023-06-09
+Microsoft Office 365,2021,Microsoft,COMP-001,2023-03-06
+LibreOffice,7.4,The Document Foundation,COMP-001,2023-05-05
+Microsoft Teams,1.5.00,Microsoft,COMP-001,2023-10-07
+Mozilla Firefox,109.0,Mozilla,COMP-001,2023-06-16
+7-Zip,21.07,Igor Pavlov,COMP-001,2023-10-12
+FileZilla,3.62,FileZilla Project,COMP-001,2023-12-01
+Git,2.39,Git Community,COMP-001,2023-12-06
+VLC Media Player,3.0.18,VideoLAN,COMP-001,2023-04-16
+Adobe Acrobat Reader,2022.003,Adobe,COMP-002,2023-05-28
+LibreOffice,7.3,The Document Foundation,COMP-002,2023-12-08
+WinRAR,6.02,RARLAB,COMP-002,2023-06-21
+Microsoft Edge,109.0,Microsoft,COMP-002,2023-02-27
+Notepad++,8.4.7,Don Ho,COMP-002,2023-12-28
+VLC Media Player,3.0.18,VideoLAN,COMP-002,2023-11-03
+7-Zip,21.07,Igor Pavlov,COMP-002,2023-01-13
+Windows Defender,4.17,Microsoft,COMP-002,2023-08-06
+Git,2.39,Git Community,COMP-002,2023-07-15
+Visual Studio Code,1.73,Microsoft,COMP-002,2023-07-08
+Microsoft Office 365,2019,Microsoft,COMP-002,2023-08-04
+Zoom,5.12,Zoom Video Communications,COMP-002,2023-06-23
+Google Chrome,109.0,Google,COMP-002,2023-10-20
+Mozilla Firefox,109.0,Mozilla,COMP-002,2023-06-05
+Python 3.10,3.10.8,Python Software Foundation,COMP-002,2023-09-08
+Microsoft Teams,1.5.00,Microsoft,COMP-002,2023-10-28
+PuTTY,0.77,Simon Tatham,COMP-002,2023-10-08
+FileZilla,3.62,FileZilla Project,COMP-002,2023-07-23
+Microsoft Office 365,2021,Microsoft,COMP-003,2023-06-23
+LibreOffice,7.3,The Document Foundation,COMP-003,2023-09-22
+Windows Defender,4.17,Microsoft,COMP-003,2023-12-02
+Microsoft Edge,108.0,Microsoft,COMP-003,2023-03-17
+Zoom,5.13,Zoom Video Communications,COMP-003,2023-11-20
+7-Zip,22.01,Igor Pavlov,COMP-003,2023-09-09
+Microsoft Teams,1.5.00,Microsoft,COMP-003,2023-07-21
+Slack,4.29,Slack Technologies,COMP-003,2023-10-19
+PuTTY,0.78,Simon Tatham,COMP-003,2023-05-11
+Google Chrome,109.0,Google,COMP-003,2023-06-17
+VLC Media Player,3.0.17,VideoLAN,COMP-003,2023-08-03
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-004,2023-11-11
+PuTTY,0.78,Simon Tatham,COMP-004,2023-07-16
+Python 3.10,3.10.9,Python Software Foundation,COMP-004,2023-07-02
+Google Chrome,109.0,Google,COMP-004,2023-12-03
+WinRAR,6.11,RARLAB,COMP-004,2023-07-06
+FileZilla,3.62,FileZilla Project,COMP-004,2023-05-28
+Adobe Acrobat Reader,2021.007,Adobe,COMP-004,2023-07-09
+Git,2.38,Git Community,COMP-004,2023-04-04
+7-Zip,21.07,Igor Pavlov,COMP-004,2023-05-14
+Windows Defender,4.17,Microsoft,COMP-004,2023-06-21
+VLC Media Player,3.0.17,VideoLAN,COMP-004,2023-11-23
+Mozilla Firefox,109.0,Mozilla,COMP-004,2023-11-12
+Microsoft Office 365,2021,Microsoft,COMP-004,2023-07-19
+LibreOffice,7.3,The Document Foundation,COMP-004,2023-10-18
+Visual Studio Code,1.73,Microsoft,COMP-004,2023-06-10
+Microsoft Edge,108.0,Microsoft,COMP-004,2023-06-27
+VLC Media Player,3.0.17,VideoLAN,COMP-005,2023-09-05
+Windows Defender,4.17,Microsoft,COMP-005,2023-06-27
+Adobe Acrobat Reader,2022.003,Adobe,COMP-005,2023-11-24
+Microsoft Teams,1.6.00,Microsoft,COMP-005,2023-03-11
+Python 3.10,3.10.8,Python Software Foundation,COMP-005,2023-05-10
+Microsoft Edge,108.0,Microsoft,COMP-005,2023-10-04
+Zoom,5.13,Zoom Video Communications,COMP-005,2023-06-24
+Visual Studio Code,1.74,Microsoft,COMP-005,2023-05-20
+Mozilla Firefox,109.0,Mozilla,COMP-005,2023-05-17
+Kaspersky Endpoint Security,11.6,Kaspersky,COMP-005,2023-10-07
+7-Zip,22.01,Igor Pavlov,COMP-005,2023-12-09
+Slack,4.29,Slack Technologies,COMP-005,2023-10-10
+Windows Defender,4.17,Microsoft,COMP-006,2023-10-08
+Microsoft Office 365,2021,Microsoft,COMP-006,2023-05-26
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-006,2023-08-06
+7-Zip,21.07,Igor Pavlov,COMP-006,2023-01-12
+Adobe Acrobat Reader,2021.007,Adobe,COMP-006,2023-07-07
+Python 3.10,3.10.8,Python Software Foundation,COMP-006,2023-07-16
+Zoom,5.12,Zoom Video Communications,COMP-006,2023-03-01
+Microsoft Edge,108.0,Microsoft,COMP-006,2023-07-10
+Slack,4.29,Slack Technologies,COMP-006,2023-02-03
+Visual Studio Code,1.74,Microsoft,COMP-006,2023-08-01
+Microsoft Teams,1.6.00,Microsoft,COMP-006,2023-09-12
+FileZilla,3.62,FileZilla Project,COMP-006,2023-08-20
+Google Chrome,109.0,Google,COMP-006,2023-12-25
+VLC Media Player,3.0.18,VideoLAN,COMP-006,2023-01-17
+Mozilla Firefox,108.0,Mozilla,COMP-006,2023-05-13
+Mozilla Firefox,109.0,Mozilla,COMP-007,2023-04-08
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-007,2023-02-14
+7-Zip,22.01,Igor Pavlov,COMP-007,2023-05-18
+Python 3.10,3.10.9,Python Software Foundation,COMP-007,2023-03-25
+FileZilla,3.62,FileZilla Project,COMP-007,2023-02-24
+Microsoft Edge,109.0,Microsoft,COMP-007,2023-06-21
+WinRAR,6.11,RARLAB,COMP-007,2023-04-09
+Windows Defender,4.17,Microsoft,COMP-007,2023-05-21
+Microsoft Teams,1.6.00,Microsoft,COMP-007,2023-06-11
+Microsoft Office 365,2019,Microsoft,COMP-007,2023-03-07
+Visual Studio Code,1.73,Microsoft,COMP-007,2023-05-10
+VLC Media Player,3.0.18,VideoLAN,COMP-007,2023-08-16
+Notepad++,8.4.7,Don Ho,COMP-007,2023-02-14
+Google Chrome,108.0,Google,COMP-007,2023-11-06
+Zoom,5.13,Zoom Video Communications,COMP-007,2023-10-18
+PuTTY,0.77,Simon Tatham,COMP-007,2023-10-27
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-008,2023-09-01
+Git,2.39,Git Community,COMP-008,2023-07-05
+Microsoft Teams,1.6.00,Microsoft,COMP-008,2023-06-12
+Adobe Acrobat Reader,2021.007,Adobe,COMP-008,2023-04-03
+LibreOffice,7.3,The Document Foundation,COMP-008,2023-05-10
+WinRAR,6.02,RARLAB,COMP-008,2023-12-18
+Mozilla Firefox,108.0,Mozilla,COMP-008,2023-03-15
+Google Chrome,109.0,Google,COMP-008,2023-12-10
+Visual Studio Code,1.74,Microsoft,COMP-008,2023-10-02
+Slack,4.28,Slack Technologies,COMP-008,2023-12-25
+FileZilla,3.62,FileZilla Project,COMP-008,2023-12-12
+7-Zip,22.01,Igor Pavlov,COMP-008,2023-06-27
+Microsoft Office 365,2019,Microsoft,COMP-008,2023-02-18
+Notepad++,8.4.7,Don Ho,COMP-008,2023-04-13
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-009,2023-06-01
+Microsoft Office 365,2019,Microsoft,COMP-009,2023-08-02
+Windows Defender,4.18,Microsoft,COMP-009,2023-10-17
+Slack,4.28,Slack Technologies,COMP-009,2023-04-02
+Mozilla Firefox,108.0,Mozilla,COMP-009,2023-07-05
+Adobe Acrobat Reader,2022.003,Adobe,COMP-009,2023-07-05
+7-Zip,21.07,Igor Pavlov,COMP-009,2023-05-14
+LibreOffice,7.4,The Document Foundation,COMP-009,2023-05-02
+Microsoft Teams,1.6.00,Microsoft,COMP-009,2023-07-25
+Google Chrome,109.0,Google,COMP-009,2023-12-05
+Microsoft Edge,108.0,Microsoft,COMP-009,2023-02-09
+VLC Media Player,3.0.17,VideoLAN,COMP-009,2023-03-01
+Notepad++,8.4.7,Don Ho,COMP-009,2023-08-17
+Zoom,5.13,Zoom Video Communications,COMP-009,2023-07-24
+Slack,4.29,Slack Technologies,COMP-010,2023-05-19
+Notepad++,8.4.8,Don Ho,COMP-010,2023-01-17
+Microsoft Edge,109.0,Microsoft,COMP-010,2023-09-14
+WinRAR,6.11,RARLAB,COMP-010,2023-02-24
+FileZilla,3.62,FileZilla Project,COMP-010,2023-03-23
+Zoom,5.13,Zoom Video Communications,COMP-010,2023-12-12
+Windows Defender,4.18,Microsoft,COMP-010,2023-08-03
+Git,2.38,Git Community,COMP-010,2023-12-19
+Adobe Acrobat Reader,2021.007,Adobe,COMP-010,2023-10-15
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-010,2023-09-07
+Python 3.10,3.10.9,Python Software Foundation,COMP-010,2023-01-28
+LibreOffice,7.4,The Document Foundation,COMP-010,2023-10-18
+Mozilla Firefox,109.0,Mozilla,COMP-010,2023-09-07
+Microsoft Office 365,2021,Microsoft,COMP-010,2023-02-14
+Microsoft Teams,1.6.00,Microsoft,COMP-010,2023-11-25
+Google Chrome,110.0,Google,COMP-010,2023-10-20
+PuTTY,0.78,Simon Tatham,COMP-010,2023-07-22
+7-Zip,22.01,Igor Pavlov,COMP-010,2023-02-24
+VLC Media Player,3.0.18,VideoLAN,COMP-010,2023-11-02
+Microsoft Edge,109.0,Microsoft,COMP-011,2023-01-05
+Notepad++,8.4.7,Don Ho,COMP-011,2023-02-04
+Microsoft Office 365,2019,Microsoft,COMP-011,2023-04-16
+7-Zip,22.01,Igor Pavlov,COMP-011,2023-02-07
+Microsoft Teams,1.6.00,Microsoft,COMP-011,2023-08-05
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-011,2023-04-02
+Python 3.10,3.10.8,Python Software Foundation,COMP-011,2023-11-17
+Adobe Acrobat Reader,2021.007,Adobe,COMP-011,2023-05-26
+Windows Defender,4.18,Microsoft,COMP-011,2023-09-21
+Mozilla Firefox,109.0,Mozilla,COMP-011,2023-04-09
+VLC Media Player,3.0.17,VideoLAN,COMP-011,2023-10-03
+Zoom,5.12,Zoom Video Communications,COMP-011,2023-10-12
+Slack,4.28,Slack Technologies,COMP-011,2023-09-12
+Slack,4.28,Slack Technologies,COMP-012,2023-04-24
+Microsoft Teams,1.6.00,Microsoft,COMP-012,2023-09-18
+Zoom,5.12,Zoom Video Communications,COMP-012,2023-01-20
+LibreOffice,7.4,The Document Foundation,COMP-012,2023-10-18
+Git,2.39,Git Community,COMP-012,2023-10-24
+Microsoft Edge,109.0,Microsoft,COMP-012,2023-06-14
+FileZilla,3.61,FileZilla Project,COMP-012,2023-06-02
+7-Zip,22.01,Igor Pavlov,COMP-012,2023-06-20
+VLC Media Player,3.0.17,VideoLAN,COMP-012,2023-06-04
+PuTTY,0.77,Simon Tatham,COMP-012,2023-02-02
+Mozilla Firefox,109.0,Mozilla,COMP-012,2023-04-11
+Notepad++,8.4.8,Don Ho,COMP-013,2023-07-24
+FileZilla,3.61,FileZilla Project,COMP-013,2023-09-11
+LibreOffice,7.4,The Document Foundation,COMP-013,2023-01-26
+VLC Media Player,3.0.18,VideoLAN,COMP-013,2023-06-24
+Microsoft Teams,1.6.00,Microsoft,COMP-013,2023-08-24
+Mozilla Firefox,108.0,Mozilla,COMP-013,2023-05-09
+Slack,4.28,Slack Technologies,COMP-013,2023-12-20
+Python 3.10,3.10.8,Python Software Foundation,COMP-013,2023-11-06
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-013,2023-07-12
+Microsoft Edge,108.0,Microsoft,COMP-013,2023-05-14
+7-Zip,22.01,Igor Pavlov,COMP-013,2023-05-09
+PuTTY,0.77,Simon Tatham,COMP-013,2023-12-19
+Zoom,5.12,Zoom Video Communications,COMP-013,2023-02-15
+7-Zip,22.01,Igor Pavlov,COMP-014,2023-11-27
+Mozilla Firefox,109.0,Mozilla,COMP-014,2023-05-17
+Microsoft Teams,1.6.00,Microsoft,COMP-014,2023-10-24
+Notepad++,8.4.8,Don Ho,COMP-014,2023-06-02
+Google Chrome,110.0,Google,COMP-014,2023-06-14
+FileZilla,3.61,FileZilla Project,COMP-014,2023-01-17
+Zoom,5.13,Zoom Video Communications,COMP-014,2023-11-08
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-014,2023-11-12
+VLC Media Player,3.0.17,VideoLAN,COMP-014,2023-02-23
+WinRAR,6.11,RARLAB,COMP-014,2023-04-20
+LibreOffice,7.3,The Document Foundation,COMP-014,2023-02-28
+Microsoft Office 365,2019,Microsoft,COMP-014,2023-06-20
+Visual Studio Code,1.74,Microsoft,COMP-015,2023-08-28
+Notepad++,8.4.8,Don Ho,COMP-015,2023-03-08
+Slack,4.29,Slack Technologies,COMP-015,2023-04-05
+WinRAR,6.02,RARLAB,COMP-015,2023-10-17
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-015,2023-07-19
+Google Chrome,110.0,Google,COMP-015,2023-05-17
+Python 3.10,3.10.8,Python Software Foundation,COMP-015,2023-05-20
+VLC Media Player,3.0.17,VideoLAN,COMP-015,2023-08-03
+Zoom,5.13,Zoom Video Communications,COMP-015,2023-06-08
+FileZilla,3.61,FileZilla Project,COMP-015,2023-01-25
+Adobe Acrobat Reader,2022.003,Adobe,COMP-015,2023-09-10
+Git,2.39,Git Community,COMP-015,2023-02-01
+PuTTY,0.78,Simon Tatham,COMP-015,2023-09-07
+LibreOffice,7.3,The Document Foundation,COMP-016,2023-03-03
+Python 3.10,3.10.8,Python Software Foundation,COMP-016,2023-12-13
+Windows Defender,4.18,Microsoft,COMP-016,2023-02-13
+Slack,4.29,Slack Technologies,COMP-016,2023-09-21
+PuTTY,0.78,Simon Tatham,COMP-016,2023-03-12
+Git,2.38,Git Community,COMP-016,2023-09-23
+7-Zip,21.07,Igor Pavlov,COMP-016,2023-07-01
+VLC Media Player,3.0.17,VideoLAN,COMP-016,2023-02-04
+Microsoft Teams,1.5.00,Microsoft,COMP-016,2023-09-02
+Zoom,5.13,Zoom Video Communications,COMP-016,2023-11-23
+WinRAR,6.11,RARLAB,COMP-016,2023-09-12
+Visual Studio Code,1.74,Microsoft,COMP-016,2023-03-17
+Notepad++,8.4.7,Don Ho,COMP-016,2023-07-16
+Kaspersky Endpoint Security,11.6,Kaspersky,COMP-016,2023-02-06
+Mozilla Firefox,109.0,Mozilla,COMP-016,2023-08-20
+Adobe Acrobat Reader,2022.003,Adobe,COMP-016,2023-11-27
+Microsoft Edge,109.0,Microsoft,COMP-016,2023-02-27
+FileZilla,3.62,FileZilla Project,COMP-016,2023-06-14
+Microsoft Office 365,2019,Microsoft,COMP-017,2023-06-04
+Google Chrome,109.0,Google,COMP-017,2023-05-16
+VLC Media Player,3.0.17,VideoLAN,COMP-017,2023-05-13
+WinRAR,6.11,RARLAB,COMP-017,2023-02-04
+Git,2.39,Git Community,COMP-017,2023-07-01
+Windows Defender,4.17,Microsoft,COMP-017,2023-07-26
+Microsoft Teams,1.5.00,Microsoft,COMP-017,2023-07-09
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-017,2023-05-04
+Notepad++,8.4.8,Don Ho,COMP-017,2023-07-03
+Adobe Acrobat Reader,2022.003,Adobe,COMP-017,2023-01-27
+LibreOffice,7.3,The Document Foundation,COMP-017,2023-11-16
+Mozilla Firefox,109.0,Mozilla,COMP-017,2023-10-14
+Python 3.10,3.10.8,Python Software Foundation,COMP-017,2023-05-24
+Microsoft Edge,108.0,Microsoft,COMP-017,2023-01-02
+FileZilla,3.62,FileZilla Project,COMP-017,2023-05-03
+Slack,4.29,Slack Technologies,COMP-017,2023-12-25
+PuTTY,0.78,Simon Tatham,COMP-017,2023-01-22
+Zoom,5.13,Zoom Video Communications,COMP-017,2023-09-17
+LibreOffice,7.4,The Document Foundation,COMP-018,2023-01-13
+Git,2.38,Git Community,COMP-018,2023-11-28
+Microsoft Teams,1.5.00,Microsoft,COMP-018,2023-01-16
+Microsoft Edge,108.0,Microsoft,COMP-018,2023-01-17
+7-Zip,21.07,Igor Pavlov,COMP-018,2023-05-07
+WinRAR,6.11,RARLAB,COMP-018,2023-06-02
+Slack,4.28,Slack Technologies,COMP-018,2023-06-25
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-018,2023-03-08
+Zoom,5.13,Zoom Video Communications,COMP-018,2023-01-07
+Python 3.10,3.10.9,Python Software Foundation,COMP-018,2023-04-17
+Google Chrome,109.0,Google,COMP-018,2023-09-25
+Notepad++,8.4.8,Don Ho,COMP-019,2023-04-09
+WinRAR,6.11,RARLAB,COMP-019,2023-12-09
+Slack,4.28,Slack Technologies,COMP-019,2023-12-21
+VLC Media Player,3.0.18,VideoLAN,COMP-019,2023-12-08
+Google Chrome,109.0,Google,COMP-019,2023-05-08
+Microsoft Office 365,2021,Microsoft,COMP-019,2023-12-10
+Windows Defender,4.18,Microsoft,COMP-019,2023-04-03
+Git,2.39,Git Community,COMP-019,2023-02-02
+7-Zip,22.01,Igor Pavlov,COMP-019,2023-04-27
+Adobe Acrobat Reader,2022.003,Adobe,COMP-019,2023-05-19
+Zoom,5.13,Zoom Video Communications,COMP-019,2023-07-07
+FileZilla,3.62,FileZilla Project,COMP-019,2023-12-05
+Microsoft Teams,1.5.00,Microsoft,COMP-019,2023-02-26
+Microsoft Edge,108.0,Microsoft,COMP-019,2023-01-24
+Kaspersky Endpoint Security,11.7,Kaspersky,COMP-019,2023-11-06
+Notepad++,8.4.8,Don Ho,COMP-020,2023-12-23
+Microsoft Office 365,2019,Microsoft,COMP-020,2023-04-10
+Visual Studio Code,1.73,Microsoft,COMP-020,2023-10-27
+Git,2.39,Git Community,COMP-020,2023-08-12
+Kaspersky Endpoint Security,11.6,Kaspersky,COMP-020,2023-09-26
+Mozilla Firefox,108.0,Mozilla,COMP-020,2023-06-10
+LibreOffice,7.3,The Document Foundation,COMP-020,2023-05-13
+Microsoft Teams,1.6.00,Microsoft,COMP-020,2023-05-18
+Slack,4.29,Slack Technologies,COMP-020,2023-05-27
+Microsoft Edge,108.0,Microsoft,COMP-020,2023-11-03
+VLC Media Player,3.0.18,VideoLAN,COMP-020,2023-01-05
+Windows Defender,4.18,Microsoft,COMP-020,2023-10-15
+7-Zip,22.01,Igor Pavlov,COMP-020,2023-12-25
+FileZilla,3.61,FileZilla Project,COMP-020,2023-06-11
+Google Chrome,110.0,Google,COMP-020,2023-12-07
