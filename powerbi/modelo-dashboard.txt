@@ -1,0 +1,484 @@
+# 📊 Modelo de Dados - Dashboard Power BI de Inventário de TI
+
+## 🗂️ Estrutura do Modelo de Dados
+
+### Visão Geral
+
+O modelo de dados segue o padrão **Star Schema** (Esquema Estrela), com:
+- **3 Tabelas Fato:** Hardware, Licenças, Manutenção
+- **1 Tabela Dimensão:** Calendário
+- **Relacionamentos 1:N** entre tabelas
+
+```
+           Calendário
+               ↓
+           Hardware ←→ Manutenção
+               
+           Licenças
+```
+
+---
+
+## 📋 Tabelas do Modelo
+
+### Tabela 1: Hardware (Fato Principal)
+
+**Descrição:** Inventário completo de ativos de hardware
+
+**Origem:** `hardware-sample.csv`
+
+**Colunas:**
+
+| Coluna | Tipo | Descrição | Exemplo |
+|--------|------|-----------|---------|
+| ID_Ativo | Texto | Identificador único do ativo | HW-0001 |
+| Tipo | Texto | Categoria do equipamento | Desktop, Notebook |
+| Marca | Texto | Fabricante | Dell, HP, Lenovo |
+| Modelo | Texto | Modelo específico | OptiPlex 7090 |
+| Numero_Serie | Texto | Serial do fabricante | ABC123456 |
+| Processador | Texto | CPU instalada | Intel Core i5 |
+| RAM_GB | Número Inteiro | Memória RAM em GB | 16 |
+| Armazenamento_GB | Número Inteiro | Capacidade de disco | 512 |
+| Tipo_Armazenamento | Texto | Tipo de disco | SSD, HDD, NVMe |
+| Sistema_Operacional | Texto | SO instalado | Windows 11 Pro |
+| Versao_SO | Texto | Versão do SO | 10.0 |
+| Data_Aquisicao | Data | Data de compra | 2023-06-15 |
+| Valor_Aquisicao | Número Decimal | Valor em R$ | 5500.00 |
+| Garantia_Inicio | Data | Início da garantia | 2023-06-15 |
+| Garantia_Fim | Data | Fim da garantia | 2026-06-15 |
+| Localizacao | Texto | Local físico | Matriz - 2º Andar |
+| Departamento | Texto | Área responsável | TI, Financeiro |
+| Usuario | Texto | Usuário atual | usuario@empresa.com |
+| Status | Texto | Situação do ativo | Ativo, Inativo |
+| Observacoes | Texto | Notas adicionais | - |
+
+**Chave Primária:** ID_Ativo
+
+**Relacionamentos:**
+- Hardware[ID_Ativo] → Manutencao[ID_Ativo] (1:N)
+- Hardware[Data_Aquisicao] → Calendario[Date] (N:1)
+
+**Cardinalidade Total:** ~50 registros (amostra)
+
+---
+
+### Tabela 2: Licenças (Fato Independente)
+
+**Descrição:** Controle de licenças de software
+
+**Origem:** `licencas-sample.csv`
+
+**Colunas:**
+
+| Coluna | Tipo | Descrição | Exemplo |
+|--------|------|-----------|---------|
+| ID_Licenca | Texto | Identificador único | LIC-0001 |
+| Software | Texto | Nome do software | Microsoft Office 365 |
+| Versao | Texto | Versão do software | 2021 |
+| Fabricante | Texto | Desenvolvedor | Microsoft |
+| Tipo_Licenca | Texto | Tipo de licenciamento | Subscrição, Perpétua |
+| Quantidade_Adquirida | Número Inteiro | Licenças compradas | 100 |
+| Quantidade_Utilizada | Número Inteiro | Licenças em uso | 85 |
+| Chave_Serial | Texto | Serial/chave | XXXXX-12345 |
+| Data_Compra | Data | Data de aquisição | 2023-01-10 |
+| Data_Validade | Data | Vencimento (se aplicável) | 2024-01-10 |
+| Valor_Unitario | Número Decimal | Preço por licença | 150.00 |
+| Valor_Total | Número Decimal | Investimento total | 15000.00 |
+| Fornecedor | Texto | Distribuidor | TechData |
+| Nota_Fiscal | Texto | NF de compra | NF-12345 |
+| Observacoes | Texto | Notas | - |
+
+**Chave Primária:** ID_Licenca
+
+**Relacionamentos:** Nenhum direto (tabela independente)
+
+**Cardinalidade Total:** ~30 registros (amostra)
+
+---
+
+### Tabela 3: Manutenção (Fato Transacional)
+
+**Descrição:** Histórico de manutenções realizadas
+
+**Origem:** `manutencao-sample.csv`
+
+**Colunas:**
+
+| Coluna | Tipo | Descrição | Exemplo |
+|--------|------|-----------|---------|
+| ID_Manutencao | Texto | Identificador único | MAN-0001 |
+| ID_Ativo | Texto | Ativo relacionado (FK) | HW-0001 |
+| Tipo_Ativo | Texto | Categoria | Desktop |
+| Data_Manutencao | Data | Data do serviço | 2023-08-20 |
+| Tipo_Manutencao | Texto | Preventiva/Corretiva | Corretiva |
+| Problema_Relatado | Texto | Descrição do problema | Lentidão no sistema |
+| Solucao_Aplicada | Texto | O que foi feito | Upgrade de RAM |
+| Tecnico_Responsavel | Texto | Quem executou | João Silva |
+| Custo | Número Decimal | Valor em R$ | 350.00 |
+| Status | Texto | Situação | Concluída |
+| Tempo_Parada_Horas | Número Inteiro | Downtime | 4 |
+| Observacoes | Texto | Notas | - |
+
+**Chave Primária:** ID_Manutencao
+**Chave Estrangeira:** ID_Ativo
+
+**Relacionamentos:**
+- Manutencao[ID_Ativo] → Hardware[ID_Ativo] (N:1)
+- Manutencao[Data_Manutencao] → Calendario[Date] (N:1)
+
+**Cardinalidade Total:** ~40 registros (amostra)
+
+---
+
+### Tabela 4: Calendário (Dimensão)
+
+**Descrição:** Tabela de datas para análises temporais
+
+**Origem:** Gerada via DAX
+
+**Código DAX:**
+```dax
+Calendario = 
+ADDCOLUMNS(
+    CALENDAR(DATE(2020,1,1), DATE(2026,12,31)),
+    "Ano", YEAR([Date]),
+    "Mês", MONTH([Date]),
+    "MesNome", FORMAT([Date], "MMMM"),
+    "MesAno", FORMAT([Date], "MMM/YY"),
+    "Trimestre", "T" & QUARTER([Date]),
+    "Semestre", "S" & IF(MONTH([Date]) <= 6, 1, 2),
+    "DiaSemana", WEEKDAY([Date]),
+    "NomeDiaSemana", FORMAT([Date], "dddd"),
+    "DiaAno", DATEDIFF(DATE(YEAR([Date]),1,1), [Date], DAY) + 1
+)
+```
+
+**Colunas:**
+
+| Coluna | Tipo | Descrição |
+|--------|------|-----------|
+| Date | Data | Data completa |
+| Ano | Número | Ano (2020-2026) |
+| Mês | Número | Mês (1-12) |
+| MesNome | Texto | Nome do mês (Janeiro) |
+| MesAno | Texto | Mês/Ano (Jan/23) |
+| Trimestre | Texto | Trimestre (T1, T2, etc) |
+| Semestre | Texto | Semestre (S1, S2) |
+| DiaSemana | Número | Dia da semana (1-7) |
+| NomeDiaSemana | Texto | Nome (Segunda-feira) |
+| DiaAno | Número | Dia do ano (1-365) |
+
+**Relacionamentos:**
+- Calendario[Date] → Hardware[Data_Aquisicao] (1:N)
+- Calendario[Date] → Manutencao[Data_Manutencao] (1:N)
+
+---
+
+## 🔗 Diagrama de Relacionamentos
+
+```
+┌─────────────────────────────────────────────┐
+│             CALENDÁRIO                      │
+│  (Dimensão - Gerada)                        │
+│                                             │
+│  • Date (PK)                                │
+│  • Ano, Mês, Trimestre                      │
+│  • MesNome, MesAno                          │
+└──────────────┬──────────────────────────────┘
+               │ 1
+               │
+               │ N
+┌──────────────▼──────────────────────────────┐
+│             HARDWARE                        │
+│  (Fato Principal)                           │
+│                                             │
+│  • ID_Ativo (PK)                            │
+│  • Tipo, Marca, Modelo                      │
+│  • Processador, RAM_GB                      │
+│  • Data_Aquisicao (FK)                      │
+│  • Valor_Aquisicao                          │
+│  • Garantia_Fim                             │
+│  • Departamento, Status                     │
+└──────────────┬──────────────────────────────┘
+               │ 1
+               │
+               │ N
+┌──────────────▼──────────────────────────────┐
+│           MANUTENÇÃO                        │
+│  (Fato Transacional)                        │
+│                                             │
+│  • ID_Manutencao (PK)                       │
+│  • ID_Ativo (FK)                            │
+│  • Data_Manutencao (FK)                     │
+│  • Tipo_Manutencao                          │
+│  • Custo                                    │
+│  • Tempo_Parada_Horas                       │
+└─────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────┐
+│            LICENÇAS                         │
+│  (Fato Independente)                        │
+│                                             │
+│  • ID_Licenca (PK)                          │
+│  • Software, Versao                         │
+│  • Quantidade_Adquirida                     │
+│  • Quantidade_Utilizada                     │
+│  • Data_Validade                            │
+│  • Valor_Total                              │
+└─────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 Colunas Calculadas Recomendadas
+
+### Tabela: Hardware
+
+```dax
+Idade_Anos = 
+DATEDIFF(Hardware[Data_Aquisicao], TODAY(), YEAR)
+```
+
+```dax
+Dias_Garantia_Restante = 
+DATEDIFF(TODAY(), Hardware[Garantia_Fim], DAY)
+```
+
+```dax
+Categoria_Idade = 
+SWITCH(
+    TRUE(),
+    Hardware[Idade_Anos] <= 2, "Novo (0-2 anos)",
+    Hardware[Idade_Anos] <= 4, "Médio (3-4 anos)",
+    "Antigo (5+ anos)"
+)
+```
+
+```dax
+Status_Garantia_Calc = 
+SWITCH(
+    TRUE(),
+    ISBLANK(Hardware[Garantia_Fim]), "Sem Info",
+    Hardware[Garantia_Fim] < TODAY(), "Vencida",
+    Hardware[Garantia_Fim] <= TODAY() + 30, "Vence 30d",
+    Hardware[Garantia_Fim] <= TODAY() + 90, "Vence 90d",
+    "Em Garantia"
+)
+```
+
+### Tabela: Licenças
+
+```dax
+Licencas_Disponiveis = 
+Licencas[Quantidade_Adquirida] - Licencas[Quantidade_Utilizada]
+```
+
+```dax
+Taxa_Utilizacao = 
+DIVIDE(
+    Licencas[Quantidade_Utilizada],
+    Licencas[Quantidade_Adquirida],
+    0
+)
+```
+
+```dax
+Status_Utilizacao = 
+SWITCH(
+    TRUE(),
+    Licencas[Taxa_Utilizacao] > 1, "Excesso",
+    Licencas[Taxa_Utilizacao] < 0.5, "Subutilizado",
+    "Normal"
+)
+```
+
+---
+
+## 🎯 Grupos e Hierarquias Recomendadas
+
+### Hierarquia Temporal
+
+```
+Ano
+└── Trimestre
+    └── Mês
+        └── Data
+```
+
+**Uso:** Análise de evolução de aquisições
+
+### Hierarquia Organizacional
+
+```
+Localização
+└── Departamento
+    └── Usuario
+```
+
+**Uso:** Drill-down de distribuição de ativos
+
+### Hierarquia de Hardware
+
+```
+Tipo
+└── Marca
+    └── Modelo
+```
+
+**Uso:** Análise detalhada de equipamentos
+
+### Agrupamento de RAM
+
+**Colunas:** RAM_GB  
+**Bins:**
+- 0-8 GB: "Baixa"
+- 9-16 GB: "Média"
+- 17-32 GB: "Alta"
+- 33+ GB: "Muito Alta"
+
+**Uso:** Distribuição de configurações
+
+---
+
+## 🔍 Considerações de Performance
+
+### Otimizações Aplicadas
+
+1. **Tipos de Dados Otimizados:**
+   - Textos curtos: Texto (não Texto Grande)
+   - IDs numéricos quando possível
+   - Datas sem hora (Date, não DateTime)
+
+2. **Relacionamentos Unidirecionais:**
+   - Maioria 1:N unidirecional
+   - Bidirecional apenas quando necessário
+
+3. **Colunas Calculadas vs Medidas:**
+   - Idade: Coluna calculada (usada em slicers)
+   - Totais: Medidas (mais eficiente)
+
+4. **Índices Automáticos:**
+   - Power BI cria índices em colunas de relacionamento
+   - Otimiza queries automaticamente
+
+### Estimativas de Tamanho
+
+**Com dados de exemplo (50 HW + 30 LIC + 40 MAN):**
+- Tamanho do arquivo .pbix: ~500 KB
+- Memória RAM usada: ~5 MB
+
+**Projeção para dados reais (1000 HW + 200 LIC + 500 MAN):**
+- Tamanho estimado: ~5-10 MB
+- RAM estimada: ~50 MB
+
+---
+
+## 📝 Documentação de Negócio
+
+### Regras de Negócio Implementadas
+
+1. **Status de Ativo:**
+   - Ativo: Em uso operacional
+   - Inativo: Armazenado/não em uso
+   - Manutenção: Em reparo
+   - Descartado: Baixado do inventário
+
+2. **Garantia:**
+   - Vencida: Data_Fim < Hoje
+   - Vencendo: Data_Fim entre Hoje e Hoje+90
+   - Ativa: Data_Fim > Hoje+90
+
+3. **Licenças:**
+   - Compliance OK: Utilizada ≤ Adquirida
+   - Risco: Utilizada > Adquirida
+   - Subutilizada: Utilizada < 50% Adquirida
+
+4. **Manutenção:**
+   - Preventiva: Manutenção programada
+   - Corretiva: Reparo de falha
+   - Upgrade: Melhoria de configuração
+
+### KPIs de Negócio
+
+| KPI | Fórmula | Meta | Frequência |
+|-----|---------|------|------------|
+| Taxa de Ativos Ativos | Ativos/Total | >85% | Mensal |
+| Garantias Vencidas | Count(Vencidas) | 0 | Semanal |
+| Taxa Uso Licenças | Usadas/Total | 80-95% | Mensal |
+| Custo Manutenção/Ativo | CustoTotal/Ativos | <10% valor | Trimestral |
+| Idade Média Parque | Média(Idade) | <3 anos | Semestral |
+
+---
+
+## 🔄 Processo de Atualização
+
+### Atualização de Dados
+
+**Frequência Recomendada:**
+- **Hardware:** Semanal (nova coleta via script)
+- **Licenças:** Mensal (revisão manual)
+- **Manutenção:** Diário (registro contínuo)
+
+**Passos:**
+1. Executar scripts de coleta (PowerShell/Python)
+2. Atualizar arquivos CSV
+3. No Power BI: Atualizar (Ctrl+R)
+4. Validar dados
+5. Republica (se em Service)
+
+### Versionamento
+
+**Convenção de nomes:**
+```
+Dashboard-Inventario-TI_v1.0_YYYYMMDD.pbix
+```
+
+**Exemplo:**
+```
+Dashboard-Inventario-TI_v1.0_20260115.pbix
+```
+
+---
+
+## 🆘 Troubleshooting do Modelo
+
+### Problema: Relacionamento não funciona
+
+**Causa:** Tipos de dados diferentes
+**Solução:** 
+```
+- Verifique ambas as colunas são Texto
+- Ou ambas Número Inteiro
+- Converta se necessário no Power Query
+```
+
+### Problema: Medida retorna BLANK()
+
+**Causa:** Contexto de filtro vazio
+**Solução:**
+```dax
+Medida = 
+VAR Resultado = [SuaMedida]
+RETURN IF(ISBLANK(Resultado), 0, Resultado)
+```
+
+### Problema: Desempenho lento
+
+**Causa:** Muitas colunas calculadas
+**Solução:** Converta para medidas quando possível
+
+---
+
+## 📚 Referências
+
+- [Star Schema Design](https://docs.microsoft.com/power-bi/guidance/star-schema)
+- [DAX Best Practices](https://www.sqlbi.com/articles/best-practices-dax/)
+- [Power BI Performance](https://docs.microsoft.com/power-bi/guidance/power-bi-optimization)
+
+---
+
+**Documento:** Modelo de Dados v1.0  
+**Última Atualização:** Janeiro 2026  
+**Autor:** GUIPETAV  
+**Status:** Aprovado para uso

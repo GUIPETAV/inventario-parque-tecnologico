@@ -1,0 +1,266 @@
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                      GUIA RÁPIDO - TEMPLATES EXCEL                            ║
+║              Inventário de Parque Tecnológico - v1.0                           ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCALIZAÇÃO DOS ARQUIVOS
+═════════════════════════════════════════════════════════════════════════════════
+excel/
+├── template-inventario-hardware.xlsx ................ Gestão de Hardware
+├── template-licencas-software.xlsx .................. Gestão de Licenças
+├── template-manutencao.xlsx ......................... Registro de Manutenções
+├── dashboard-excel-exemplo.xlsx ..................... Dashboard com Exemplos
+├── README.md ....................................... Documentação Completa
+└── create_templates.py .............................. Script Python para regenerar
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🚀 COMO USAR OS TEMPLATES
+═════════════════════════════════════════════════════════════════════════════════
+
+OPÇÃO 1: COMEÇAR RÁPIDO
+─────────────────────────
+1. Abra o arquivo: dashboard-excel-exemplo.xlsx
+2. Veja o formato e layout profissional
+3. Use como base para seus dados
+4. Copie e adapte para sua organização
+
+OPÇÃO 2: USAR TEMPLATES VAZIOS
+───────────────────────────────
+1. Abra: template-inventario-hardware.xlsx
+2. Preencha dados na aba "Hardware" a partir da linha 2
+3. Use validações da aba "Validações" para campos com dropdown
+4. Dashboard atualiza automaticamente
+
+OPÇÃO 3: INTEGRAR COM DADOS REAIS
+──────────────────────────────────
+1. Exporte seus dados para CSV
+2. Importe na aba correspondente
+3. Mantenha o mesmo formato de colunas
+4. Aplique formatação conforme necessário
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📊 TEMPLATES DISPONÍVEIS
+═════════════════════════════════════════════════════════════════════════════════
+
+1. TEMPLATE-INVENTARIO-HARDWARE.XLSX
+   ├─ Aba "Hardware"
+   │  └─ Registre todos os equipamentos (Desktop, Notebook, Servidor, etc.)
+   │     Campos: Marca, Modelo, Série, Processador, RAM, Armazenamento, SO, etc.
+   │     Dados de exemplo: 3 equipamentos reais
+   │
+   ├─ Aba "Validações"
+   │  └─ Listas pré-preenchidas para uso em Dropdowns
+   │     • Tipos: Desktop, Notebook, Servidor, Impressora, Switch, Roteador
+   │     • Status: Ativo, Inativo, Manutenção, Descartado, Emprestado
+   │     • Departamentos: TI, RH, Financeiro, Gerência, Operações, Vendas, Admin
+   │     • E mais: Localizações, Tipos Armazenamento, Sistemas Operacionais
+   │
+   └─ Aba "Dashboard"
+      └─ KPIs automáticos: Total, Ativos, Manutenção, Descartados
+
+2. TEMPLATE-LICENCAS-SOFTWARE.XLSX
+   ├─ Aba "Licenças"
+   │  └─ Registre todas as licenças de software
+   │     Campos: Software, Versão, Fabricante, Tipo, Quantidade, Datas, Valores
+   │     Fórmulas automáticas: Licenças Disponíveis, Status
+   │     Dados de exemplo: Microsoft Office, AutoCAD
+   │
+   └─ Aba "Validações"
+      └─ Listas para: Tipos (Volumen, Perpetua, Subscricao, Trial, etc.)
+
+3. TEMPLATE-MANUTENCAO.XLSX
+   ├─ Aba "Manutenções"
+   │  └─ Registre manutenções realizadas
+   │     Campos: ID_Ativo, Tipo, Data, Problema, Solução, Técnico, Custo
+   │     Tipos de Manutenção: Preventiva, Corretiva, Adaptativa, Preditiva
+   │     Dados de exemplo: 2 casos reais
+   │
+   └─ Aba "Validações"
+      └─ Listas para tipos de manutenção, status, técnicos
+
+4. DASHBOARD-EXCEL-EXEMPLO.XLSX
+   ├─ Aba "Dashboard"
+   │  └─ Visualização principal com 4 KPIs coloridos
+   │     • Total de Ativos
+   │     • Ativos Ativos
+   │     • Taxa de Utilização
+   │     • Valor Total
+   │
+   ├─ Aba "Dados Hardware"
+   │  └─ 7 equipamentos de exemplo com dados completos
+   │
+   └─ Aba "Análise"
+      └─ Análise automática: Contagem por tipo, percentuais, contagem por status
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📋 CAMPOS PRINCIPAIS
+═════════════════════════════════════════════════════════════════════════════════
+
+HARDWARE (20 campos)
+  ID_Ativo, Tipo, Marca, Modelo, Numero_Serie, Processador, RAM_GB,
+  Armazenamento_GB, Tipo_Armazenamento, Sistema_Operacional, Versao_SO,
+  Data_Aquisicao, Valor_Aquisicao, Garantia_Inicio, Garantia_Fim,
+  Localizacao, Departamento, Usuario, Status, Observacoes
+
+LICENÇAS (17 campos)
+  ID_Licenca, Software, Versao, Fabricante, Tipo_Licenca, Quantidade_Adquirida,
+  Quantidade_Utilizada, Licencas_Disponiveis*, Chave_Serial, Data_Compra,
+  Data_Validade, Valor_Unitario, Valor_Total*, Status_Licenca*,
+  Fornecedor, Nota_Fiscal, Observacoes
+  (* = calculado por fórmula)
+
+MANUTENÇÕES (12 campos)
+  ID_Manutencao, ID_Ativo, Tipo_Ativo, Data_Manutencao, Tipo_Manutencao,
+  Problema_Relatado, Solucao_Aplicada, Tecnico_Responsavel, Custo,
+  Status, Tempo_Parada_Horas, Observacoes
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🎨 FORMATAÇÃO PROFISSIONAL
+═════════════════════════════════════════════════════════════════════════════════
+✓ Headers azuis (#003366) com texto branco
+✓ Bordas em todas as células
+✓ Alternância de linhas em azul claro para melhor legibilidade
+✓ Panes congeladas para fácil navegação
+✓ Largura de colunas auto-ajustada
+✓ Números formatados: Moeda (R$), Datas (dd/mm/yyyy), Percentuais (%)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🔄 IMPLEMENTAR VALIDAÇÕES EM DROPDOWNS (EXCEL)
+═════════════════════════════════════════════════════════════════════════════════
+
+PASSO A PASSO:
+1. Abra o template (ex: template-inventario-hardware.xlsx)
+2. Selecione a coluna que deseja validar (ex: Tipo)
+   → Clique na letra da coluna (B) ou selecione B2:B1000
+3. Vá para: Dados → Validação de Dados (ou Validação)
+4. Na aba "Configurações":
+   → Permitir: Intervalo de Células (ou Lista)
+   → Fonte: =Validações!$A$2:$A$8
+     (ref: Sheet!$ColStart$RowStart:$ColEnd$RowEnd)
+5. Clique OK
+
+EXEMPLO PARA TEMPLATE HARDWARE:
+• Coluna "Tipo" (B): Validações!$A$2:$A$8 (Tipos)
+• Coluna "Status" (S): Validações!$B$2:$B$6 (Status)
+• Coluna "Departamento" (Q): Validações!$C$2:$C$8 (Departamentos)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+💡 DICAS DE USO
+═════════════════════════════════════════════════════════════════════════════════
+
+1. MANTER INTEGRIDADE DOS DADOS
+   ✓ Sempre use as listas de validação (Validações)
+   ✓ Mantenha o mesmo formato de colunas
+   ✓ Não altere o nome das abas se usar fórmulas
+
+2. APROVEITAR AS FÓRMULAS
+   ✓ Os KPIs são atualizados automaticamente
+   ✓ Licenças Disponíveis calcula: Qty_Adquirida - Qty_Utilizada
+   ✓ Status Licença indica automaticamente se expirou
+
+3. CRIAR BACKUPS
+   ✓ Mantenha cópia dos templates originais
+   ✓ Faça backup regularmente de seus dados
+   ✓ Versionamento: template_v1.xlsx, template_v2.xlsx, etc.
+
+4. EXPANDIR OS DADOS
+   ✓ Comece com templates de exemplo
+   ✓ Adicione dados gradualmente
+   ✓ Teste cada categoria antes de usar em produção
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🔧 REGENERAR TEMPLATES
+═════════════════════════════════════════════════════════════════════════════════
+
+Se precisar recriar os templates com alterações:
+
+1. Abra terminal/prompt de comando
+2. Navegue até: inventario-parque-tecnologico/
+3. Execute: python3 create_templates.py
+4. Os templates serão recriados em excel/
+
+Requisitos: Python 3.x com openpyxl instalado
+  → pip install openpyxl
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📚 DOCUMENTAÇÃO COMPLETA
+═════════════════════════════════════════════════════════════════════════════════
+Para informações detalhadas, consulte: excel/README.md
+
+Contém:
+• Descrição completa de cada template
+• Explicação de todas as colunas
+• Guia de validações
+• Casos de uso
+• Personalizações recomendadas
+• Dicas de análise
+
+═════════════════════════════════════════════════════════════════════════════════
+
+❓ DÚVIDAS FREQUENTES
+═════════════════════════════════════════════════════════════════════════════════
+
+P: Os templates funcionam em LibreOffice Calc?
+R: Sim! São 100% compatíveis. Abra normalmente.
+
+P: Posso editar as listas de Validação?
+R: Sim! Abra a aba "Validações" e adicione/remova valores conforme necessário.
+
+P: Como importar dados de outro arquivo?
+R: Copie e cole os dados respeitando as colunas. Ou exporte para CSV e importe.
+
+P: Os KPIs funcionam automaticamente?
+R: Sim! Ao adicionar dados, os KPIs se atualizam automaticamente.
+
+P: Posso usar em Power BI?
+R: Sim! Exporte para CSV e importe no Power BI para dashboards interativos.
+
+═════════════════════════════════════════════════════════════════════════════════
+
+✅ CHECKLIST INICIAL
+═════════════════════════════════════════════════════════════════════════════════
+☐ Abri o dashboard-excel-exemplo.xlsx para ver o layout
+☐ Entendi a estrutura dos 4 templates
+☐ Li o arquivo README.md para detalhes
+☐ Verifiquei os dados de exemplo
+☐ Testei as validações (dropdowns)
+☐ Preparei meus dados reais
+☐ Comecei a preencher template-inventario-hardware.xlsx
+☐ Implementei validações nas minhas colunas
+
+═════════════════════════════════════════════════════════════════════════════════
+
+🎯 PRÓXIMOS PASSOS
+═════════════════════════════════════════════════════════════════════════════════
+1. Escolha um template para começar
+2. Adicione seus dados reais
+3. Implemente as validações
+4. Crie gráficos para análise visual
+5. Configure alertas para datas importantes
+6. Integre com Power BI para dashboards dinâmicos
+7. Automatize processos com macros (opcional)
+
+═════════════════════════════════════════════════════════════════════════════════
+
+📞 VERSÃO E INFORMAÇÕES
+═════════════════════════════════════════════════════════════════════════════════
+Versão: 1.0
+Data de Criação: 14/01/2026
+Ferramenta: Python 3.x + openpyxl
+Formato: XLSX (Excel 2016+)
+Tamanho Total: ~48 KB
+Compatibilidade: Excel, LibreOffice Calc, Google Sheets, Excel Online
+
+═════════════════════════════════════════════════════════════════════════════════
+
+✨ BOM TRABALHO! TEMPLATES PRONTOS PARA USO! ✨
+
+═════════════════════════════════════════════════════════════════════════════════
