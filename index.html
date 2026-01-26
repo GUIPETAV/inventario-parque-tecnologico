@@ -19,7 +19,7 @@
 <body>
     <!-- Header -->
     <header id="header">
-        <nav class="container">
+        <nav class="container" aria-label="Main navigation">
             <div class="nav-brand">
                 <h1>🖥️ Inventário de Parque Tecnológico</h1>
                 <p class="subtitle">Material didático completo para gestão de ativos de TI</p>
@@ -93,7 +93,7 @@
         <div class="container">
             <h2 class="section-title">🎓 Módulos do Curso</h2>
             <div class="modules-grid">
-                <a href="docs/plano-de-aula.md" class="module-card">
+                <a href="docs/plano-de-aula.md" class="module-card" aria-label="Acessar módulo 1: Fundamentos de ITAM">
                     <div class="module-number">1</div>
                     <h3>Fundamentos de ITAM</h3>
                     <p class="module-duration">⏱️ 30 minutos</p>
@@ -101,7 +101,7 @@
                     <span class="module-link">Ver Conteúdo →</span>
                 </a>
                 
-                <a href="excel/README.md" class="module-card">
+                <a href="excel/README.md" class="module-card" aria-label="Acessar módulo 2: Excel para Inventário">
                     <div class="module-number">2</div>
                     <h3>Excel para Inventário</h3>
                     <p class="module-duration">⏱️ 60 minutos</p>
@@ -109,7 +109,7 @@
                     <span class="module-link">Ver Conteúdo →</span>
                 </a>
                 
-                <a href="powerbi/README.md" class="module-card">
+                <a href="powerbi/README.md" class="module-card" aria-label="Acessar módulo 3: Power BI para Dashboards">
                     <div class="module-number">3</div>
                     <h3>Power BI para Dashboards</h3>
                     <p class="module-duration">⏱️ 90 minutos</p>
@@ -117,7 +117,7 @@
                     <span class="module-link">Ver Conteúdo →</span>
                 </a>
                 
-                <a href="scripts/" class="module-card">
+                <a href="scripts/" class="module-card" aria-label="Acessar módulo 4: Automação com Scripts">
                     <div class="module-number">4</div>
                     <h3>Automação com Scripts</h3>
                     <p class="module-duration">⏱️ 45 minutos</p>
@@ -125,7 +125,7 @@
                     <span class="module-link">Ver Conteúdo →</span>
                 </a>
                 
-                <a href="exercicios/" class="module-card">
+                <a href="exercicios/" class="module-card" aria-label="Acessar módulo 5: Exercícios Práticos">
                     <div class="module-number">5</div>
                     <h3>Exercícios Práticos</h3>
                     <p class="module-duration">⏱️ 60 minutos</p>
@@ -372,7 +372,7 @@
             
             <div class="footer-bottom">
                 <p>
-                    &copy; 2026 GUIPETAV | 
+                    &copy; <span id="current-year">2026</span> GUIPETAV | 
                     Licença <a href="LICENSE">MIT</a> | 
                     Feito com ❤️ para a comunidade de TI
                 </p>
@@ -382,6 +382,9 @@
 
     <!-- Smooth Scroll Script -->
     <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

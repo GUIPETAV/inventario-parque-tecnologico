@@ -219,7 +219,15 @@ img {
     font-size: var(--font-size-large);
     font-weight: 600;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+/* Fallback for browsers that don't support backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    .tech-icon {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
 }
 
 .tech-icon:hover {
